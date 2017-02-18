@@ -1,0 +1,29 @@
+doctype html
+
+html
+  head
+    meta charset="utf-8"
+
+    title El Juego de Mecanografía | Learn Touch Typing in Spanish
+    meta content="" name="description"
+    meta content="Kenzan Hase" name="author"
+
+    link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet" type="text/css"
+    = stylesheet_link_tag 'game.css'
+
+  body
+    = javascript_include_tag 'game.js'
+
+    .wrapper
+      h1 Are You Ready?
+      p Type as many words as you can until time runs out!
+      button START
+      .outerWrap
+        .scoreWrap
+          p Score
+          span.score 0
+        .timeWrap
+          p Time left
+          span.time 60
+      .wordsWrap
+        p.words
