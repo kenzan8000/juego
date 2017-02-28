@@ -5,23 +5,26 @@ gem 'rails', '5.0.1'                                            # rails
 gem 'puma'                                                      # server
 gem 'active_hash'                                               # model
 gem 'sidekiq'                                                   # async
-gem 'uglifier', '>= 1.3.0'
+gem 'uglifier'
 gem 'turbolinks'
-gem 'jbuilder', '~> 2.0'                                        # json
-gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'jbuilder'                                                  # json
+gem 'sdoc'
 gem 'whenever', :require => false                               # cron
 gem 'faraday'                                                   # http client
 gem 'devise'                                                    # authentication
 gem 'cancan'                                                    # authentication
+gem 'omniauth'                                                  # authentication
+#gem 'omniauth', '~> 1.3.1'                                      # authentication
+gem 'omniauth-oauth2'                                           # authentication
+gem 'omniauth-facebook'                                         # authentication
 gem 'rails_admin'                                               # admin
 gem 'carrierwave', github: 'carrierwaveuploader/carrierwave'    # uploader
 gem 'cloudinary'                                                # image-storage
 gem "rack-timeout"
-gem 'scout_apm'                                                 #monitoring
-
+gem 'scout_apm'                                                 # monitoring
 
 # front-end
-gem 'sass-rails', '~> 5.0'
+gem 'sass-rails'
 gem 'slim-rails'
 
 group :development do
