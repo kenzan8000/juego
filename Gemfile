@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 ruby '2.3.1'
 
 gem 'rails', '5.0.1'                                            # rails
+gem 'listen'
 gem 'puma'                                                      # server
 gem 'active_hash'                                               # model
 gem 'sidekiq'                                                   # async
@@ -13,14 +14,10 @@ gem 'whenever', :require => false                               # cron
 gem 'faraday'                                                   # http client
 gem 'devise'                                                    # authentication
 gem 'cancan'                                                    # authentication
-gem 'omniauth'                                                  # authentication
-#gem 'omniauth', '~> 1.3.1'                                      # authentication
-gem 'omniauth-oauth2'                                           # authentication
-gem 'omniauth-facebook'                                         # authentication
 gem 'rails_admin'                                               # admin
 gem 'carrierwave', github: 'carrierwaveuploader/carrierwave'    # uploader
 gem 'cloudinary'                                                # image-storage
-gem "rack-timeout"
+gem 'rack-timeout'
 gem 'scout_apm'                                                 # monitoring
 
 # front-end
