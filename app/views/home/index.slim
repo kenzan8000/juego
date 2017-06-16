@@ -1,23 +1,26 @@
 doctype html
 
 html
+
   head
     meta charset="utf-8"
+    = csrf_meta_tags
 
     title El Juego de Mecanografía | Learn Touch Typing in Spanish
     meta content="" name="description"
     meta content="Kenzan Hase" name="author"
 
     link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet" type="text/css"
-    = stylesheet_link_tag 'home.game.css'
+    = stylesheet_link_tag 'application'
+    = stylesheet_link_tag 'home.game'
 
-  body
+    script type='text/javascript' src='https://unpkg.com/vue'
+    script type='text/javascript' src='https://unpkg.com/vue-resource'
     = javascript_include_tag 'home.game.js'
 
+  body
     .wrapper
-      h1 Are You Ready?
-      p Type as many words as you can until time runs out!
-      button START
+      button.button START
       .outerWrap
         .scoreWrap
           p Score
