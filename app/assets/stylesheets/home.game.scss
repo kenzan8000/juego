@@ -1,51 +1,58 @@
+@import 'application';
+
+
 .wrapper {
-    margin: 0 auto;
-    padding: 2%;
+    @include mh(auto);
     max-width: 600px;
     height: 500px;
-    background-color: #424242;
 }
 
+// outer
 .outerWrap:after {
-    content: "";
+//    content: "";
     display: block;
     clear: both;
 }
 
+// score
 .scoreWrap {
     float: left;
 }
 
+// time
 .timeWrap {
     float: right;
 }
 
+// words
 .wordsWrap {
-    margin-top: 50px;
+    @include mv(1.0em);
 }
 
+// button
+$button-shadow-size: 5px;
+.button-wrap {
+    @include ac;
+    @include mv(2.0em);
+}
 .button {
+    @include c(#fff);
+    @include bc($c-alizaring);
+    @include no-decoration;
+    @include hover;
+    @include pv(0.25em);
+    @include ph(0.50em);
+    font-size: 1.6em;
     border: none;
-    background-color: #FF7373;
-    box-shadow: 0px 5px 0px 0px #CE4646;
+    border-radius: 0.5em;
     outline: none;
-    border-radius: 5px;
-    padding: 10px 15px;
-    font-size: 22px;
-    text-decoration: none;
-    margin: 20px;
-    color: #fff;
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-
+    box-shadow: 0 $button-shadow-size 0 0 $c-pomegranateg;
     &:active {
-      transform: translate(0px, 5px);
-      -webkit-transform: translate(0px, 5px);
-      box-shadow: 0px 1px 0px 0px;
+        transform: translate(0, $button-shadow-size);
+        -webkit-transform: translate(0, $button-shadow-size);
+        box-shadow: 0 0 0 0;
     }
 }
-
 
 //* {
 //  margin: 0;

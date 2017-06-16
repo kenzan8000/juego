@@ -1,0 +1,82 @@
+/********** Base **********/
+body, h1, h2, h3, h4, h5, div, p, a, span, img, ul, li, hr, iframe {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    text-align: justify;
+    text-justify: inter-ideograph;
+}
+
+/********** Extension **********/
+@mixin opacity($opacity) {
+    opacity: $opacity;
+    filter: alpha(opacity = $opacity * 100);
+}
+@mixin hover { &:hover { cursor: pointer; } }
+@mixin no-decoration { text-decoration: none; }
+
+// margin
+@mixin mt($mt) { margin-top: $mt !important; }
+@mixin mb($mb) { margin-bottom: $mb !important; }
+@mixin mv($mv) {
+    @include mt($mv);
+    @include mb($mv);
+}
+@mixin mh($mh) {
+    margin-left: $mh !important;
+    margin-right: $mh !important;
+}
+
+// padding
+@mixin pt($pt) { padding-top: $pt !important; }
+@mixin pb($pb) { padding-bottom: $pb !important; }
+@mixin pv($pv) {
+    @include pt($pv);
+    @include pb($pv);
+}
+@mixin ph($ph) {
+    padding-left: $ph !important;
+    padding-right: $ph !important;
+}
+
+// color
+$c-turquoise:       #1abc9c;
+$c-green-seag:      #16a085;
+$c-emeraldg:        #2ecc71;
+$c-nephritisg:      #27ae60;
+$c-peter-riverg:    #3498db;
+$c-belize-holeg:    #2980b9;
+$c-amethystg:       #9b59b6;
+$c-wisteriag:       #8e44ad;
+$c-wet-asphaltg:    #34495e;
+$c-midnight-blueg:  #2c3e50;
+$c-sun-flowerg:     #f1c40f;
+$c-orangeg:         #f39c12;
+$c-carrotg:         #e67e22;
+$c-pumpking:        #d35400;
+$c-alizaring:       #e74c3c;
+$c-pomegranateg:    #c0392b;
+$c-cloudsg:         #ecf0f1;
+$c-silverg:         #bdc3c7;
+$c-concreteg:       #95a5a6;
+$c-asbestosg:       #7f8c8d;
+$c-3:               #333;
+$c-6:               #666;
+$c-9:               #999;
+$c-b:               #bbb;
+$c-e:               #eee;
+@mixin c($c) { color: $c; }
+@mixin bc($c) { background-color: $c; }
+
+// alignment
+@mixin al { text-align: left; }
+@mixin ar { text-align: right; }
+@mixin ac { text-align: center; }
+
+// display
+@mixin db { display: block; }
+@mixin di { display: inline; }
+@mixin dib { display: inline-block; }
+@mixin dtc { display: table-cell; }
