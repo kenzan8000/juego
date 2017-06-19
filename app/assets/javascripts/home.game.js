@@ -94,4 +94,3 @@ window.onload = function() {
 //}
 //
 //document.addEventListener("keydown", typing, false);
-

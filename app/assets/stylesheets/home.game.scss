@@ -9,23 +9,26 @@
 
 // outer
 .outerWrap:after {
-//    content: "";
+    content: "";
     display: block;
     clear: both;
 }
 
 // score
 .scoreWrap {
+    @include al;
     float: left;
 }
 
 // time
 .timeWrap {
+    @include ar;
     float: right;
 }
 
 // words
 .wordsWrap {
+    @include ac;
     @include mv(1.0em);
 }
 
