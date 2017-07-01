@@ -1,4 +1,27 @@
 window.onload = function() {
+
+    Vue.component('button-wrap', {
+        props: [''],
+        methods: {
+            playBGM: function() {
+                var audio = document.getElementById("audio");
+                audio.play();
+            }
+        },
+        template: `
+            <div class="button-wrap">
+                <button class="button" v-on:click="playBGM();">START</button>
+                <audio id="audio" class="hidden" src="http://kolber.github.io/audiojs/demos/mp3/juicy.mp3"></audio>
+            </div>
+        `
+    });
+    new Vue({
+        el: '#button-wrap',
+        data: { },
+        methods: {
+        }
+    });
+
 };
 
 //var temp = document.querySelector('.time');
