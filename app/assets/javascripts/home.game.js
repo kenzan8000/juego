@@ -4,14 +4,18 @@ window.onload = function() {
         props: [''],
         methods: {
             playBGM: function() {
-                var audio = document.getElementById("audio");
-                audio.play();
+                var bgm = new Howl({
+                    src: ['http://kolber.github.io/audiojs/demos/mp3/juicy.mp3'],
+                    loop: true
+                });
+                bgm.once('load', function() {
+                    bgm.play();
+                });
             }
         },
         template: `
             <div class="button-wrap">
                 <button class="button" v-on:click="playBGM();">START</button>
-                <audio id="audio" class="hidden" src="http://kolber.github.io/audiojs/demos/mp3/juicy.mp3"></audio>
             </div>
         `
     });
