@@ -23,3 +23,12 @@ html
     .wrapper
 
       start-button#start-button
+
+      .time-part-wrapper
+        .time-part.seconds.ones
+          .digit-wrapper
+            span.digit 0
+            - (-3..0).each do |i|
+              span.digit= -i
+
+
