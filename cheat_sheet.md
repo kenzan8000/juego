@@ -194,6 +194,9 @@ class ImageUploader < CarrierWave::Uploader::Base
   include Cloudinary::CarrierWave
   ...
 
+  # commemt out
+  # storage :file
+
   def extension_whitelist
     %w(jpg jpeg gif png)
   end
