@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  language_set_id: 1
+  text_in: MyString
+  text_out: MyString
+
+two:
+  language_set_id: 1
+  text_in: MyString
+  text_out: MyString
