@@ -17,6 +17,11 @@ p {
 @mixin hover { &:hover { cursor: pointer; } }
 @mixin no-decoration { text-decoration: none; }
 
+@mixin fs($fs) { font-size: $fs; }
+
+@mixin w($w) { width: $w !important; }
+@mixin h($h) { height: $h !important; }
+
 // margin
 @mixin mt($mt) { margin-top: $mt !important; }
 @mixin mb($mb) { margin-bottom: $mb !important; }
@@ -24,9 +29,11 @@ p {
     @include mt($mv);
     @include mb($mv);
 }
+@mixin ml($ml) { margin-left: $ml !important; }
+@mixin mr($mr) { margin-right: $mr !important; }
 @mixin mh($mh) {
-    margin-left: $mh !important;
-    margin-right: $mh !important;
+    @include ml($mh);
+    @include mr($mh);
 }
 
 // padding
@@ -36,10 +43,13 @@ p {
     @include pt($pv);
     @include pb($pv);
 }
+@mixin pl($pl) { padding-left: $pl !important; }
+@mixin pr($pr) { padding-right: $pr !important; }
 @mixin ph($ph) {
-    padding-left: $ph !important;
-    padding-right: $ph !important;
+    @include pl($ph);
+    @include pr($ph);
 }
+
 
 // color
 $c-turquoise:       #1abc9c;

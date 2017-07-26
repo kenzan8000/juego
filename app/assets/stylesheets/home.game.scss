@@ -1,27 +1,36 @@
 @import 'application';
 
+html, body {
+    @include h(100%);
+}
 
 .wrapper {
-    @include mh(auto);
-    max-width: 600px;
-    height: 500px;
-}
+    @include h(100%);
+    position: absolute;
+    top: 50%;
+    margin-top: -240px;
+    min-height: 480px;
 
+    left: 50%;
+    margin-left: -320px;
+    min-width: 640px;
+
+}
 
 // button
-$button-shadow-size: 5px;
+$button-shadow-size: 0.15em;
 .button-wrap {
     @include ac;
-    @include mv(2.0em);
 }
+
 .button {
     @include c(#fff);
     @include bc($c-alizarin);
     @include no-decoration;
     @include hover;
-    @include pv(0.25em);
-    @include ph(0.50em);
-    font-size: 1.6em;
+    @include pv(0.20em);
+    @include ph(0.40em);
+    @include fs(1.6em);
     border: none;
     border-radius: 0.5em;
     outline: none;
@@ -31,63 +40,4 @@ $button-shadow-size: 5px;
         -webkit-transform: translate(0, $button-shadow-size);
         box-shadow: 0 0 0 0;
     }
-}
-
-
-$one-second: 1s;
-$easing: cubic-bezier(1,0,1,0);
-/* =========================================== */
-
-@mixin animate($count) {
-  $step: (100 / $count);
-  $progress: 0%;
-  $translate: -$digit-height;
-  @while $progress < 100 {
-    #{$progress} { transform: translateY($translate); }
-    $progress: $progress + $step;
-    $translate: $translate - $digit-height;
-  }
-}
-
-$digit-height: 180px;
-
-.digit {
-  display: inline-block;
-  font-size: 200px;
-  @include c($c-alizarin);
-  height: $digit-height;
-  line-height: 1;
-}
-
-.time-part-wrapper {
-  display: inline-block;
-  margin-right: 50px;
-  position: relative;
-}
-
-.time-part {
-  width: 140px;
-  text-align: center;
-  height: $digit-height;
-  overflow: hidden;
-  display: inline-block;
-  margin-left: -5px;
-  box-sizing: border-box;
-
-  .digit-wrapper {
-    animation-timing-function: $easing;
-  }
-
-  &.seconds {
-    &.ones .digit-wrapper {
-      animation-name: seconds-ones;
-      animation-duration: $one-second * 3;
-      animation-iteration-count: 360;
-    }
-  }
-
-}
-
-@keyframes seconds-ones {
-  @include animate(3);
 }

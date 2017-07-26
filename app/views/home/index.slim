@@ -10,7 +10,6 @@ html
     meta content="" name="description"
     meta content="Kenzan Hase" name="author"
 
-    link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet" type="text/css"
     = stylesheet_link_tag 'home.game'
 
     script type='text/javascript' src='https://unpkg.com/vue'
@@ -23,12 +22,3 @@ html
     .wrapper
 
       start-button#start-button
-
-      .time-part-wrapper
-        .time-part.seconds.ones
-          .digit-wrapper
-            span.digit 0
-            - (-3..0).each do |i|
-              span.digit= -i
-
-
